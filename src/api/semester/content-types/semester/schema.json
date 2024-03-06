@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "semesters",
+  "info": {
+    "singularName": "semester",
+    "pluralName": "semesters",
+    "displayName": "Semester",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "academic_years": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::academic-year.academic-year"
+    },
+    "semesterNum": {
+      "type": "string"
+    },
+    "specializations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::specialization.specialization"
+    }
+  }
+}
